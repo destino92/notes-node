@@ -18,6 +18,13 @@ const argv = yargs
     }
   })
   .command('list', 'List all notes')
+  .command('read', 'Read a note', {
+    title: {
+      describe: 'Title of note',
+      demand: true,
+      alias: 't'
+    }
+  })
   .help()
   .argv;
 var command = argv._[0];
